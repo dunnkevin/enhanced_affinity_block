@@ -11,6 +11,7 @@ view: order_items_base {
     #### If this info is in different tables that you're joining together (e.g. a trx table to a product hierarchy, as in the example below), you may want to persist the joined table as a PDT if feasible
     #### Make sure to not change the "AS [...]" in the query below, as these column names are used later on
     sql: SELECT
+    *,
       order_items.order_id AS transaction_id
       ,order_items.created_at AS order_created_time
       ,product_hierarchy.id as SKU_id
